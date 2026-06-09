@@ -1,0 +1,31 @@
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Streamlit cache/config local
+.streamlit/secrets.toml
+.streamlit/credentials.toml
+
+# Local generated outputs
+KET_QUA_KIEM_TRA.xlsx
+So_do_tien_trinh_dao_tao*.html
+So_do_tien_trinh_dao_tao*.svg
+
+# Jupyter / notebooks cache
+.ipynb_checkpoints/
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
