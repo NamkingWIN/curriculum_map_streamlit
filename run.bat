@@ -5,7 +5,7 @@ setlocal
 REM =====================================================
 REM  RUN APP CURRICULUM MAPPING
 REM  - Tự tạo môi trường ảo .venv nếu chưa có
-REM  - Tự cài thư viện trong requirements_curriculum_app.txt
+REM  - Tự cài thư viện trong requirements.txt
 REM  - Chạy ứng dụng Streamlit
 REM =====================================================
 
@@ -28,11 +28,11 @@ if not exist "curriculum_mapping_app.py" (
 )
 
 REM Kiem tra file requirements; neu chua co thi tao nhanh
-if not exist "requirements_curriculum_app.txt" (
-    echo [CANH BAO] Khong tim thay requirements_curriculum_app.txt. Dang tao file mac dinh...
-    > "requirements_curriculum_app.txt" echo streamlit^>=1.32
-    >> "requirements_curriculum_app.txt" echo pandas^>=2.0
-    >> "requirements_curriculum_app.txt" echo openpyxl^>=3.1
+if not exist "requirements.txt" (
+    echo [CANH BAO] Khong tim thay requirements.txt. Dang tao file mac dinh...
+    > "requirements.txt" echo streamlit^>=1.32
+    >> "requirements.txt" echo pandas^>=2.0
+    >> "requirements.txt" echo openpyxl^>=3.1
 )
 
 REM Tim Python
@@ -76,11 +76,11 @@ if errorlevel 1 (
     echo [CANH BAO] Khong nang cap duoc pip. Tiep tuc cai thu vien...
 )
 
-".venv\Scripts\python.exe" -m pip install -r requirements_curriculum_app.txt
+".venv\Scripts\python.exe" -m pip install -r requirements.txt
 if errorlevel 1 (
     echo.
     echo [LOI] Cai dat thu vien khong thanh cong.
-    echo Hay kiem tra ket noi internet hoac noi dung file requirements_curriculum_app.txt.
+    echo Hay kiem tra ket noi internet hoac noi dung file requirements.txt.
     echo.
     pause
     exit /b 1
